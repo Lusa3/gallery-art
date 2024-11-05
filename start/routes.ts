@@ -26,6 +26,8 @@ Route.get('/', async ({ view }) => {
 
 import { join } from 'path'
 
+// Capturer toutes les routes et rediriger vers l'application React
 Route.get('*', async ({ response }) => {
   response.download(join(__dirname, '..', 'resources', 'frontend', 'build', 'index.html'))
 })
+
